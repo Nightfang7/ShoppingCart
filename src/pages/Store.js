@@ -12,10 +12,10 @@ function Store() {
   const { state: { page: {products} } } = useContext(StoreContext);
   return (
     <Layout className="bg-white">
-      <Header className="layout-header">
+      <Header className="layout-header" style={{ position: "sticky", top: "0" }}>
         <AppHeader/>
       </Header>
-      <Content className="layout-content container">
+      <Content className="layout-content container" >
         <ProductNavBar />
         <ProductList products={products}/>
       </Content>
